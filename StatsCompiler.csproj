@@ -1,0 +1,217 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9B84087-AF8C-4B5B-9799-003A790D5C89}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>StatsCompiler</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StatsCompiler</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="TreeViewMS, Version=1.0.3251.25183, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TreeViewMS\bin\Debug\TreeViewMS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LuaFileListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataDumper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo\BaseInfo.cs" />
+    <Compile Include="DataInfo\BuildableInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo\BuildingInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo\Extensions\Cannibalize.cs" />
+    <Compile Include="DataInfo\Extensions\DanceInfo.cs" />
+    <Compile Include="DataInfo\Extensions\DirectSpawnInfo.cs" />
+    <Compile Include="DataInfo\Extensions\EntrenchInfo.cs" />
+    <Compile Include="DataInfo\Extensions\ExtensionInfo.cs" />
+    <Compile Include="DataInfo\Extensions\FearInfo.cs" />
+    <Compile Include="DataInfo\Extensions\HarvestInfo.cs" />
+    <Compile Include="DataInfo\Extensions\LightningFieldInfo.cs" />
+    <Compile Include="DataInfo\Extensions\MinefieldInfo.cs" />
+    <Compile Include="DataInfo\Extensions\PossessEnemyInfo.cs" />
+    <Compile Include="DataInfo\Extensions\PossessInfo.cs" />
+    <Compile Include="DataInfo\Extensions\RampageInfo.cs" />
+    <Compile Include="DataInfo\InfiltrationInfo.cs" />
+    <Compile Include="DataInfo\JumpInfo.cs" />
+    <Compile Include="DataInfo\LeaderInfo.cs" />
+    <Compile Include="DataInfo\Modifiers\ModifierInfo.cs" />
+    <Compile Include="DataInfo\Modifiers\Modifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo\Requirements\RequirementInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo\Requirements\Requirements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo\ResearchInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo\SkillInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo\SquadInfo.cs" />
+    <Compile Include="DataInfo\SummonInfo.cs" />
+    <Compile Include="DataInfo\UnitInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo\WeaponInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LuaParser.cs" />
+    <Compile Include="RepeatedAbilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepeatedAbilities.Designer.cs">
+      <DependentUpon>RepeatedAbilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnnecessaryAbilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnnecessaryAbilities.Designer.cs">
+      <DependentUpon>UnnecessaryAbilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlCompiler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PathsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Translation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TranslationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranslationDialog.Designer.cs">
+      <DependentUpon>TranslationDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LuaFileListDialog.resx">
+      <DependentUpon>LuaFileListDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepeatedAbilities.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RepeatedAbilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnnecessaryAbilities.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UnnecessaryAbilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PathsDialog.resx">
+      <DependentUpon>PathsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranslationDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
